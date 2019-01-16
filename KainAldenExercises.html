@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<style>.center-image {text-align: center;}
+.center-image img {display: inline-block;}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns are equal size  */
+.column {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/*controlls to move an element to be vertcaly alligned*/
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+<body>
+
+<!--  Create header and give it a boarder + size -->
+ <header style="background-color:#aaa; border-style: solid ;text-align: center;height: 15vh;position: relative;">
+		
+        <img  class="vertical-center"src="https://skin.thebathroomboutique.co.uk/skin/frontend/default/bathroom/images/TBB-logo.png" alt="BathroomBoutique Logo" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ </header>
+
+
+ <!--  Create a Row to house the 2 coloumns, again give it a border and size -->
+<div class="row" style="height:70vh">
+
+  <div id="Left"class="column" style="background-color:#aaa; border-style: solid;text-align: center;position: relative;overflow:hidden">
+		<!--The contents of each column is wrapped in a Div and the vertical allignment rules applied to this wrapper-->
+		
+		<div class="vertical-center" ">
+			<h2>Top 5 Tv Shows</h2>
+   			<ul> 
+				<li>Game Of Thrones</li>
+				<li>American Horror Story</li>
+				<li>Pointless</li>
+				<li>The Might Boosh</li>
+				<li>The Walking Dead</li>
+			</ul>
+			<a href="https://www.theheatingboutique.co.uk/">Visit The Heating Boutique</a>
+		</div>
+
+  </div>
+
+  
+
+  <div Id="Right"class="column" style="background-color:#bbb; border-style: solid ;text-align: center;position: relative;overflow:hidden">
+    
+	<div class="vertical-center">
+		<h2 >Teams Results</h2>
+		<form action= "javascript:PostResults()">
+			<!--Drop Down Menu for the Teams-->
+			<select name="Teams" ID="Teams">
+				<option value="England">England</option>
+				<option value="Germany">Germany</option>
+				<option value="Italy">Italy</option>
+				<option value="Spain">Spain</option>
+				<option value="France">France</option>
+			 </select>
+
+			 <br><br>
+			 <!-- Radio Buttons for the Results. Win is checked by defult-->
+			 <input type="radio" name="Result" value="Win" checked> Win
+			 <input type="radio" name="Result" value="Lose"> Lose
+
+			 <br><br>
+			 <input type="submit" value="Submit">
+		</form>
+	</div>
+
+   </div>
+
+</div>
+
+
+<!--  Create footer and give it a boarder + size -->
+ <footer style="background-color:#bbb; border-style: solid ;text-align: center;height: 15vh;">
+	<button type="button" onclick="FooBar();">Show Part 2!</button>
+</footer>
+
+<script>
+
+function PostResults() {
+	//Get the current value from the teams drop down:
+    var TeamsValue = document.getElementById("Teams").value;
+	//use jquery to get the currentley selected Radio button:
+	var ResultsValue = $("input:radio[name=Result]:checked").val();
+	alert(TeamsValue + " " + ResultsValue);
+}
+function FooBar() {
+	// as we are going to be dispalying the foo bar data in the coloumns we change their overflow value to allows us to scroll:
+	document.getElementById("Left").style.overflow = "scroll";
+	document.getElementById("Right").style.overflow = "scroll";
+	//this variable stores the output string  :
+	var Output = "";
+
+	//thses variables will track whihc numbers result in a word replacement	 :
+	var Foos = "";
+	var Bars= "";
+	var FooBars = "";
+
+	//loop for all 100 numbers	 :
+    for (i = 1; i <= 100; i++) {
+	//if a number leaves no remainder when divided by 3 and 5 FooBar will be put into the output string	 :
+	if((i % 3)== 0 && (i % 5) == 0)
+	{
+		//we update the output string and store the current number we are calulating in the Foobar list	  :
+		 Output += "FooBar"+"<br>";
+		 FooBars+= i+"<br>";
+	}
+	//then repeat the process for the numbers seperatley  :
+	else if((i % 3)==0 )
+	{
+		 Output += "Foo"+"<br>";
+		 Foos+= i+"<br>";
+	}
+	else if((i % 5)==0 )
+	{
+		 Output+= "Bar"+"<br>";
+		 Bars+= i+"<br>";
+	}
+	//if the number is not divisible by 3 or 5 we add the number itself to the output:
+	else
+	{
+		   Output+= i+"<br>";
+	}
+
+}	
+	// finally the contents of each coloumn is updated:
+	document.getElementById("Left").innerHTML = Output;
+	document.getElementById("Right").innerHTML = "Foo Numbers are:" + "<br>" + Foos + "<br>" + 
+												 "Bar Numbers are:" + "<br>" + Bars + "<br>"  +
+												 "FooBar Numbers are:" + "<br>" + FooBars + "<br>";	
+}
+
+</script>
+
+</body>
+</html>
