@@ -1,0 +1,171 @@
+﻿body {
+	background-image: url("assets/Home-img.jpg");
+	background-size: 100vw 77.4vh;
+	background-repeat: no-repeat;
+	background-position: 0 8.3vh;
+	font-family: 'Roboto-Medium', sans-serif;
+	margin: 0;
+}
+
+header{
+	background:white;
+}
+
+#InfoBanner{
+	height: 4.1vh;
+	line-height:4.1vh;
+	font-size: 1.3VH;  
+	line-height:4.1vh;
+	color:white;
+	background: #1B325F;
+}
+
+form{	
+	/*sets size			*/
+	height:44.8vh;
+	width:19.3vw;
+	/*set position */
+	top:47.8vh;
+	left:60.4vw;
+	position:absolute;
+	text-align: center;
+	/*creates orange shadow	*/
+	box-shadow: 0.7vw 2.5vh #F26C4F;
+	background: white;
+}
+
+#FormHeadding{	 	
+	top:3.4vh;
+	font-size: 1.6VH;
+	position:relative;
+	text-align: center;
+	color: #1B325F;		
+}
+
+#Name{
+	height:3.3vh;
+	width:17.1vw;
+	font-size: 1.4VH;
+	background: #E9F2F9;
+	border: none;
+	margin-top:3.8vh;
+}
+
+#Email{
+	height:3.3vh;
+	width:17.1vw; 
+	font-size: 1.4VH;
+	background: #E9F2F9;
+	border: none;
+	margin-top:1.7vh;
+}
+
+#Selection{
+	margin-top:1.7vh;  
+	border: none;
+	height:3.3vh;
+	width:17.1vw; 
+	font-size: 1.4VH;
+			
+	/*remove dedault arrows and repalce with our custom ones */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	background-image: url('assets/ArrowUp-icon.svg'),url('assets/ArrowDown-icon.svg');
+	background-position: 98% 35%,98% 65%;
+	background-repeat: no-repeat,no-repeat;
+	background: #E9F2F9;
+	outline: none;
+}
+
+#Description{
+	font-size: 1.4VH;
+	font-family: 'Roboto-Medium', sans-serif;
+	background: #E9F2F9;
+	margin-top:1.7vh;
+	vertical-align:top;
+	resize: none;
+	border: none;
+	height:10vh;
+	width:17.1vw;
+}
+
+#Send{ 
+	font-size: 1.4VH;
+	font-weight: bold;
+	height:4.2vh;
+	width:7.8vw;
+	left:10.4vw;
+	float: right;
+	border: none;
+	margin-top:2.5vh; 
+	margin-right:1.1vw;
+	color:white ;
+	background: #1B325F;
+}
+
+#TextBoxMain{
+	height:10vh;
+	width:34.4vw;
+	top:18.4vh;
+	left:46.1vw;
+	position:absolute;
+	color: #FFFFFF;
+	text-align: right;
+	font-size: 2.2vh;
+	letter-spacing: 0.15vw;
+	line-height: 3vw;
+}
+
+#SubTextBox{	
+	height:5.7vh;
+	width:25.5vw;
+	top:30.8vh;
+	left:54.1vw;
+	position:absolute;
+	color: #FFFFFF;
+	text-align: right;
+	font-size: 1.8vh;
+	letter-spacing: 0vw;
+	line-height: 1.5vw;		
+}
+
+#LearnButton{
+	background:#1B325F;
+	border: none;
+	color:white ;
+	height:4.2vh;
+	width:8.9vw;
+	top:39vh;
+	left:70.7vw;
+	position:absolute;
+	font-weight: bold;
+	font-size: 1.4vh;
+}
+
+nav
+{
+	height: 9.6vh;
+	padding-right:19.4vw;
+	line-height:9.6vh;
+	font-size:1.3vh;
+	color: #333333:
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+  list-style-type: none;
+}
+li a{
+  text-decoration: none;
+  color: #333333;
+  float:right ;padding-left:1.7vw;
+}
+li a:hover {
+  color: #3A89C9;
+}
+ul {
+  display: inline;
+}

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  							 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="styleSheet.css">
+    <title></title>
+</head>
+
+<body>
+<header role="banner">
+	<!-- Create blue banner at top of page/inserts text and images -->
+	<div id="InfoBanner">
+		<div style="display: inline;margin-left:13.3vw;">Working hours: Mon-Fri (8.30 - 18.00) - Sat (9.00 - 13.00) - Sun & Bank Holidays (Closed) </div>
+		<div style="display: inline;margin-left:15.9vw;"><img style="height:1vh;margin-right:0.5vw;"src="assets/Email-icon.svg"> workshop@email.com</div>
+		<div style="display: inline;margin-left:4.7vw;"><img style="height:1.4vh;margin-right:0.5vw;vertical-align: text-bottom;"src="assets/Phone-icon.svg" >0208 544 2734</div>  
+	</div>
+
+	<!-- creates the navigation bar and inserts the logo  -->
+	<nav>
+	 <img style="height: 7.1vh;width:9.4vw;margin-left:19.5vw;margin-top:1vh;" class="logo" src="assets/logo.png">
+	 <ul>
+		<li> <a >CONTACT US</a></li>
+		<li> <a >ABOUT US</a></li>
+		<li> <a >FAQS</a></li>
+		<li> <a >CARS FOR SALE</a></li>
+		<li> <a >SOCIAL<a></li>
+		<li> <a >PROMOTIONS</a></li>
+		<li> <a >SERVICES</a></li> 	 
+		<li><a class="active">HOME</a></li>
+	 </ul>
+	</nav>
+</header>
+
+<main id="content" class="group" role="main">
+
+	<!-- creates the text overlaying the background and the Learn more button -->
+	<div id="TextBoxMain">
+		<h1>Free Pick-Up<br>and Delivery</h1>
+	</div>
+	<div id="SubTextBox">
+		<p>We offer a free pick up and delivery service <br>to your home or place of work.</p>		
+	</div>
+	<button id="LearnButton" type="button">LEARN MORE</button>
+	
+	<!-- creates the form for booking an appointment-->
+	<form >
+	<div id="FormHeadding">
+	  <b>BOOK AN APPOINTMENT</b>
+		
+	  <input  id="Name"type="text" name=" name" value=" Name">
+	  <input id="Email" type="text" name=" Email" value=" Email">
+
+	  <select id="Selection">
+		<option value=" VW"> VW</option>
+		<option value="Ford"> Ford</option>
+		<option value="Mercedes"> Mercedes</option>
+	  </select>
+	  
+	  <textarea id="Description"> Case Description</textarea>
+	  <input id="Send" type="submit" value="Send">
+	</div>
+	</form> 
+</main>
+
+</body>
+</html>
+
